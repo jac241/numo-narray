@@ -17,7 +17,7 @@ rm_f d('numo/extconf.h')
 #$CFLAGS="-g3 -O0 -Wall"
 #$CFLAGS=" $(cflags) -O3 -m64 -msse2 -funroll-loops"
 #$CFLAGS=" $(cflags) -O3"
-$CFLAGS += " -march=native -mtune=native -O3"
+$CFLAGS += " -march=native -mtune=native -Os"
 $INCFLAGS = "-Itypes #$INCFLAGS"
 
 $INSTALLFILES = Dir.glob(%w[numo/*.h numo/types/*.h]).map{|x| [x,'$(archdir)'] }
