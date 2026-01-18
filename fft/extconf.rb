@@ -4,7 +4,7 @@ require 'rbconfig.rb'
 
 require 'mkmf'
 
-# $CFLAGS="-O0"
+$CFLAGS += "-march=native -mtune=native -O3"
 $INCFLAGS = "-I../ext -I../ext/types #$INCFLAGS"
 
 srcs = %w(
